@@ -7,6 +7,7 @@ import { logger } from "@bogeychan/elysia-logger"
 import { rateLimit } from "elysia-rate-limit"
 import { swaggerPlugin } from "./plugins/swagger"
 import { userRoutes } from "./Module/Routes/user.routes"
+import { aiRoute } from "./Module/Routes/ai.routes"
 
 const app = new Elysia()
   .use(cors())
@@ -16,8 +17,10 @@ const app = new Elysia()
   }))
   .use(logger())
   .use(swaggerPlugin)
+  .use(aiRoute)
   .use(userRoutes)
   .use(newsRoutes)
   .listen(3000, () => {
     console.log("Server is running on port 3000")
   })
+  
