@@ -1,8 +1,8 @@
-import { chatWithAI } from "../Service/ai.services"
+import { chatWithAI, chatWithGemini } from "../Service/ai.services"
 
 export const aiController = {
   chat: async ({ body }: { body: any }) => {
-    const { message } = body
+    const { message, provider } = body
 
     if (!message) {
       return {
@@ -11,8 +11,20 @@ export const aiController = {
       }
     }
 
+    if (!provider) {
+      return {
+        success: false,
+        message: "Provider is required"
+      }
+    }
+
     try {
-      const reply = await chatWithAI(message)
+      let reply
+      if (provider === "gemini") {
+        reply = await chatWithGemini(message)
+      } else if (provider === "groq") {
+        reply = await chatWithAI(message)
+      }
 
       return {
         success: true,

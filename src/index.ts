@@ -8,6 +8,7 @@ import { rateLimit } from "elysia-rate-limit"
 import { swaggerPlugin } from "./plugins/swagger"
 import { userRoutes } from "./Module/Routes/user.routes"
 import { aiRoute } from "./Module/Routes/ai.routes"
+import { healthRoutes } from "./Module/Routes/health.routes"
 
 const app = new Elysia()
   .use(cors())
@@ -20,7 +21,8 @@ const app = new Elysia()
   .use(aiRoute)
   .use(userRoutes)
   .use(newsRoutes)
-  .listen(3000, () => {
-    console.log("Server is running on port 3000")
+  .use(healthRoutes)
+  .listen(4000, () => {
+    console.log("Server is running on port 4000")
   })
   

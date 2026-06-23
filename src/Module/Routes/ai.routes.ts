@@ -4,6 +4,7 @@ import { aiController } from "../Controller/ai.controller"
 export const aiRoute = new Elysia({ prefix: "/ai" })
   .post("/chat", aiController.chat, {
     body: t.Object({
-      message: t.String()
+      message: t.String(),
+      provider: t.String()
     })
   })

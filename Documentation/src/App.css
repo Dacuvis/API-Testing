@@ -1,0 +1,88 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.App-header {
+  background-color: #00bcd4; /* Cyan Blue */
+  padding: 20px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.App-container {
+  display: flex;
+  flex: 1;
+}
+
+.App-sidebar {
+  background-color: #80deea; /* Light Cyan Blue */
+  padding: 20px;
+  width: 250px;
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.App-sidebar h3 {
+  color: #212121;
+  margin-top: 0;
+}
+
+.App-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.App-sidebar li {
+  margin-bottom: 10px;
+}
+
+.App-sidebar a {
+  text-decoration: none;
+  color: #424242; /* Darker Grey */
+  font-weight: bold;
+}
+
+.App-sidebar a:hover {
+  color: #00796b; /* Teal Dark */
+}
+
+.App-main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #ffffff; /* White */
+}
+
+.App-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f5f5f5; /* Light Grey */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.App-section h2 {
+  color: #00838f; /* Cyan Dark */
+  border-bottom: 2px solid #00bcd4;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.App-section h3 {
+  color: #0097a7; /* Cyan */
+  margin-top: 20px;
+}
+
+.App-section p,
+.App-section pre {
+  line-height: 1.6;
+  color: #424242;
+}
+
+.App-section pre {
+  background-color: #eceff1; /* Blue Grey Light */
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
