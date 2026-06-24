@@ -1,4 +1,4 @@
-POST http://localhost:3000/auth/register
+POST http://localhost:4000/auth/register
 {
   "email": "rayyan@example.com",
   "password": "password123",

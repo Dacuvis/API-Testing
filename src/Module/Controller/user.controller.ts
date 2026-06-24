@@ -2,7 +2,7 @@ import { UserService } from "../Service/user.service";
 import type { RegisterInput } from "../global.types";
 
 export class UserController {
-  static register({ body, set }: { body: RegisterInput; set: any }) {
+  static register({ body, set }: any) {
     try {
       const result = UserService.register(body);
       set.status = 201

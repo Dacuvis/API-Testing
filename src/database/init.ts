@@ -22,8 +22,8 @@ CREATE TABLE IF NOT EXISTS profiles (
         role IN ('warga', 'admin_rt', 'admin_rw')
     ),
 
-    rt TEXT NOT NULL,
-    rw TEXT NOT NULL,
+    rt TEXT NULL,
+    rw TEXT NULL,
 
     phone_number TEXT,
 

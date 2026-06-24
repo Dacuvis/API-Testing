@@ -21,8 +21,8 @@ export class UserClient {
         data.nik,
         data.fullName,
         data.role,
-        data.rt,
-        data.rw,
+        data.rt ?? null,
+        data.rw ?? null,
         data.phoneNumber ?? null,
         data.isLansia
       )

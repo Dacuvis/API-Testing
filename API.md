@@ -1,7 +1,7 @@
 # API Documentation
 
 Base URL:
-http://localhost:3000
+http://localhost:4000
 
 ---
 
@@ -15,7 +15,7 @@ Send a message to AI chat endpoint.
 
 Example:
 ```bash
-curl -X POST http://localhost:3000/ai/chat \
+curl -X POST http://localhost:4000/ai/chat \
 -H "Content-Type: application/json" \
 -d '{
   "message": "Hello AI"
@@ -34,11 +34,18 @@ Register a new user account.
 
 Example:
 ```bash
-curl -X POST http://localhost:3000/auth/register \
+curl -X POST http://localhost:4000/auth/register \
 -H "Content-Type: application/json" \
 -d '{
   "email": "test@mail.com",
-  "password": "123456"
+  "password": "123456",
+  "nik": "3276010101010001",
+  "fullName": "Rayyan Irfansya",
+  "role": "warga",
+  "rt": "001",
+  "rw": "002",
+  "phoneNumber": "081234567890",
+  "isLansia": false
 }'
 ```
 
@@ -50,7 +57,7 @@ Get user profile by ID.
 
 Example:
 ```bash
-curl http://localhost:3000/auth/profile/1
+curl http://localhost:4000/auth/profile/1
 ```
 
 ---
@@ -65,7 +72,7 @@ Get latest CNN news.
 
 Example:
 ```bash
-curl http://localhost:3000/news/cnn
+curl http://localhost:4000/news/cnn
 ```
 
 ---
@@ -78,7 +85,7 @@ Get latest Tempo news.
 
 Example:
 ```bash
-curl http://localhost:3000/news/tempo
+curl http://localhost:4000/news/tempo
 ```
 
 ---
@@ -91,7 +98,7 @@ Search CNN news.
 
 Example:
 ```bash
-curl "http://localhost:3000/news/cnn/search?q=tech"
+curl "http://localhost:4000/news/cnn/search?q=tech"
 ```
 
 ---
@@ -104,5 +111,5 @@ Search Tempo news.
 
 Example:
 ```bash
-curl "http://localhost:3000/news/tempo/search?q=politik"
+curl "http://localhost:4000/news/tempo/search?q=politik"
 ```
